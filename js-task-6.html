@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript task-6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+          }
+          
+          body {
+            background-color: #eee;
+          }
+          
+          #wrapper {
+            width: 500px;
+            overflow: hidden;
+            border: 0px solid #000;
+            margin: 50px auto;
+            padding: 10px;
+          }
+          
+          .main-content {
+            width: 450px;
+            height: 50%;
+            margin: 10px auto;
+            background-color: #fff;
+            border: 2px solid #e6e6e6;
+            padding: 40px 50px;
+          }
+          
+          .header {
+            border: 0px solid #000;
+            margin-bottom: 5px;
+            padding-right: 50px;
+            text-align: center;
+          }
+          
+          .header img {
+            height: 50px;
+            width: 175px;
+            margin: auto;
+            position: relative;
+            left: 40px;
+          }
+          
+          .input-1,
+          .input-2 {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 8px 12px;
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            border-radius: 3px;
+          }
+          
+          .overlap-text {
+            position: relative;
+          }
+          
+          .overlap-text a {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: #003569;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: 'Overpass Mono', monospace;
+            letter-spacing: -1px;
+          }
+          
+          .btn {
+            width: 100%;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            padding: 5px 12px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+          }
+          
+          .sub-content {
+            width: 450px;
+            height: 40%;
+            margin: 10px auto;
+            
+            padding: 20px 50px;
+            background-color: transparent;
+          }
+          
+          .s-part {
+            text-align: center;
+            font-family: 'Overpass ', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+          }
+          
+          .s-part a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #3897f0;
+            font-family: 'Overpass Mono', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+          }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="main-content">
+          <div class="header">
+            <img src="https://i.imgur.com/zqpwkLQ.png" />
+          </div>
+          <div class="l-part">
+              <div class="input-group mb-3">
+                  <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+                  <input type="text" class="form-control" placeholder="Username" required>  
+              </div>
+      
+              <div class="input-group mb-3">
+                  <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                  <input type="password" class="form-control" placeholder="Password" required>  
+              </div>
+            
+              <input type="button" value="Log in" class="btn" id="loginBtn" />
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+              <div><input type="checkbox"/><label>Remember me</label></div>
+              <a href="#" style="text-decoration: none;">Forgot Password?</a>
+          </div>
+          
+        </div>
+        <div class="sub-content">
+          <div class="s-part">
+            Don't have an account!<a href="#">Sign up here.</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var usernameInput = document.querySelector('input[type="text"]');
+          var passwordInput = document.querySelector('input[type="password"]');
+          var loginButton = document.getElementById('loginBtn');
+          loginButton.addEventListener("click", function () {
+            var usernameValue = usernameInput.value.trim();
+            var passwordValue = passwordInput.value.trim();
+            if (usernameValue === "") {
+              alert("Please enter a username.");
+              return;
+            }
+            if (passwordValue === "") {
+              alert("Please enter a password.");
+              return;
+            }
+            alert("Login successful!");
+          });
+        });
+      </script>
+
+    
+</body>
+</html>

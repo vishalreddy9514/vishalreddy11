@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript task-5</title>
+
+    <style>
+        .error-msg {
+            color:#e60000;
+            font-size: 15px;
+            font-weight:bold;
+            font-family:"Serif";
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+     </head>
+
+<body>
+    <center>
+        <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+        <span id="nameError" class="error-msg"></span>
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span id="emailError" class="error-msg"></span>
+        <br>
+        <br>
+         <label for="website">Website:</label>
+        <input type="text" id="website">
+        <span id="websiteError" class="error-msg"></span>
+        <br>
+        <br>
+        
+        
+       <label for="message" class="d-flex">Message:</label>
+        <textarea id="message" rows="4" cols="23"></textarea>
+        <span id="messageError" class="error-msg"></span>
+    
+
+        
+        <br>
+        <input type="submit" value="Submit">
+        </form>
+    </center>
+    
+    <script>
+    function validateForm() {
+        let valid = true;
+        const nameInput = document.getElementById("name");
+            const nameError = document.getElementById("nameError");
+            if (nameInput.value === "") {
+                nameError.textContent = "This field is required";
+                nameInput.style.borderColor = "#e60000";
+                valid = false;
+            } else {
+                nameError.textContent = "";
+                nameInput.style.borderColor = "";
+            }
+            const emailInput = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+            if (emailInput.value === "") {
+                emailError.textContent = "A valid email address is required";
+                emailInput.style.borderColor = "#e60000";
+                valid = false;
+            }  else {
+                emailError.textContent = "";
+                emailInput.style.borderColor = "";
+            }
+            const websiteInput = document.getElementById("website");
+            const websiteError = document.getElementById("websiteError");
+            if (websiteInput.value === "") {
+                websiteError.textContent = "A valid url is required";
+                websiteInput.style.borderColor = "red";
+                valid = false;
+            }else {
+                websiteError.textContent = "";
+                websiteInput.style.borderColor = "";
+            }
+            const messageInput = document.getElementById("message");
+            const messageError = document.getElementById("messageError");
+            if (messageInput.value === "") {
+                messageError.textContent = "This field is required";
+                messageInput.style.borderColor = "red";
+                valid = false;
+            } else {
+                messageError.textContent = "";
+                messageInput.style.borderColor = "";
+            }
+            
+            return valid;
+    }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+
+</html>

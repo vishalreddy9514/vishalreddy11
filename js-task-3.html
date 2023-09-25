@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript task-3</title>
+</head>
+<body>
+    <center>
+        <div style="width:300px; border:2px; border-style:solid;padding:10px; text-align:left;">
+            <label for="firstnum">1st Number:</label>
+            <input type="text" id="firstnum" />
+            <br><br>
+            <label for="secondnum">2nd Number:</label>
+            <input type="text" id="secondnum" />
+            <br><br>
+            <div style="text-align:left">
+                <button onclick="multiply()">Multiply</button>
+                <button onclick="divide()">Divide</button>
+            </div>
+            <p id="result"></p>
+
+        </div>
+    </center>
+    <script>
+        function multiply() {
+            let firstNumVal = parseInt(document.getElementById("firstnum").value);
+            let secondNumVal = parseInt(document.getElementById("secondnum").value);
+            document.getElementById("result").innerHTML = "The Result Is:" + firstNumVal * secondNumVal;
+
+
+
+
+
+        }
+
+        function divide() {
+            let firstNumVal = parseInt(document.getElementById("firstnum").value);
+            let secondNumVal = parseInt(document.getElementById("secondnum").value);
+            document.getElementById("result").innerHTML = "The Result Is: " + firstNumVal / secondNumVal;
+
+
+        }
+    </script>
+</body>
+</html>
